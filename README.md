@@ -1,1 +1,2 @@
 # ComicViewAndroid
+This is not a project nor is it a package; it is a collection of sources to use for the ComicView and some examples of how to implement them.  The java files go directly in the same java directory as MainActivity and the XML files go in the appropriate res directories.
