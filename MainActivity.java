@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // originally made with array but ArrayList will be more practical
-        ComicGetter[] cg = {new ComicGetter("Calvin and Hobbes", "calvinandhobbes"),
-                new ComicGetter("Pearls Before Swine", "pearlsbeforeswine"),
-                new ComicGetter("Wizard of Id", "wizardofid"),
-                new ComicGetter("B.C.", "bc"),
-                new ComicGetter("Garfield", "garfield"),
-                new ComicGetter("Peanuts", "peanuts"),
-                new ComicGetter("Non Sequitur", "nonsequitur"),
-                new ComicGetter("Andy Capp", "andycapp")};
+        ComicGetter[] cg = {new ComicGetter("Calvin and Hobbes"),
+                new ComicGetter("Pearls Before Swine"),
+                new ComicGetter("Wizard of Id"),
+                new ComicGetter("B.C."),
+                new ComicGetter("Garfield"),
+                new ComicGetter("Peanuts"),
+                new ComicGetter("Non Sequitur"),
+                new ComicGetter("Andy Capp")};
 
         cgal = new ArrayList<>();
         for (ComicGetter c : cg)

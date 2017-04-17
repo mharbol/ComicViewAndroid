@@ -10,9 +10,12 @@ public class ComicGetter implements Serializable {
     private String comicTitle, urlExtension;
     private Bitmap comicBitmap = null;
 
-    public ComicGetter(String comicTitle, String urlExtension){
+    public ComicGetter(String comicTitle){
         this.comicTitle = comicTitle;
-        this.urlExtension = urlExtension;
+        this.urlExtension = comicTitle
+                // strip non-alphanumeric
+                .replaceAll("[^A-Za-z0-9]", "")
+                .toLowerCase();
     }
 
     // getters and setters for private fields
