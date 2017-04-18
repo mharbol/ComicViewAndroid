@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         comics.add("Non Sequitur");
         comics.add("Andy Capp");
 
-        cv.addComics(comics, 12, 6, 2013);
+        cv.addComics(comics);
 
     }
 }
