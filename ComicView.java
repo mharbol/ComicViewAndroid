@@ -13,12 +13,26 @@ public class ComicView extends ListView {
 
     private ArrayList<ComicGetter> comicGetters;
 
+
+    // Takes an ArrayList<String> of comic titles and adds them
+    // to the ComicView
     public void addComics(ArrayList<String> comics){
 
         // make ArrayList of ComicGetters to add to ListView
         comicGetters = new ArrayList<>();
         for (String comicName : comics)
             comicGetters.add(new ComicGetter(comicName));
+
+        addComicGetters();
+    }
+
+    // Takes an ArrayList<String> of comic titles and dates and adds
+    // them to the ComicView
+    public void addComics(ArrayList<String> comics, int month, int day, int year){
+        // make ArrayList of ComicGetters to add to ListView
+        comicGetters = new ArrayList<>();
+        for (String comicName : comics)
+            comicGetters.add(new ComicGetter(comicName, month, day, year));
 
         addComicGetters();
     }

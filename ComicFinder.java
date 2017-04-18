@@ -57,12 +57,4 @@ public class ComicFinder {
         // if not find, return null
         return null;
     }
-
-    // returns the specified date's comic image source URL as a String from
-    // gocomics.com. Returns null if cannot find the source
-    public static String getComicSource(String comicName, int month, int day, int year) {
-        return getComicSource(comicName + "/" + year + "/"
-                + (month > 10 ? month : "0" + month)
-                + "/" + (day > 10 ? day : "0" + day));
-    }
 }
