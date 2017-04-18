@@ -4,11 +4,12 @@ import android.graphics.Bitmap;
 
 import java.io.Serializable;
 
+
 public class ComicGetter implements Serializable {
 
     private static final long serialVersionUID = 5474901498011L;
     private String comicTitle, urlExtension;
-    private Bitmap comicBitmap = null;
+    private SerialBitmap comicBitmap = null;
 
     // Constructor for a ComicGetter for current
     // date's edition of the input comic
@@ -39,11 +40,11 @@ public class ComicGetter implements Serializable {
     }
 
     public Bitmap getComicBitmap(){
-        return comicBitmap;
+        return comicBitmap.bitmap;
     }
 
     public void setComicBitmap(Bitmap comicBitmap){
-        this.comicBitmap = comicBitmap;
+        this.comicBitmap = new SerialBitmap(comicBitmap);
     }
 
     public boolean hasComicBitmap(){
@@ -58,5 +59,4 @@ public class ComicGetter implements Serializable {
                 .replaceAll("[^A-Za-z0-9]", "")
                 .toLowerCase();
     }
-
 }

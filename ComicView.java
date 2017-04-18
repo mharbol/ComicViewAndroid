@@ -2,8 +2,10 @@ package edu.citadel.android.comicviewtester;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -44,14 +46,17 @@ public class ComicView extends ListView {
     // Custom View version of saving and restoring instance state
     @Override
     public Parcelable onSaveInstanceState(){
+
         Bundle bundle = new Bundle();
         bundle.putParcelable("superState", super.onSaveInstanceState());
         bundle.putSerializable("comicGetters", comicGetters);
+
         return bundle;
     }
 
     @Override
     public void onRestoreInstanceState(Parcelable inState){
+
         if (inState instanceof Bundle){
             Bundle bundle = (Bundle) inState;
             comicGetters = (ArrayList<ComicGetter>) bundle.getSerializable("comicGetters");
@@ -60,7 +65,6 @@ public class ComicView extends ListView {
         }
         super.onRestoreInstanceState(inState);
     }
-
 
     // constructors to make compiler and IDE happy
     // allows XML to stylize ComicView

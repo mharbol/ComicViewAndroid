@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cv = (ComicView) findViewById(R.id.activity_main);
+        cv = (ComicView) findViewById(R.id.comics);
 
         ArrayList<String> comics = new ArrayList<>();
         comics.add("Calvin and Hobbes");
