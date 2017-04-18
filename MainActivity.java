@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ComicView cv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
