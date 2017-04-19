@@ -1,4 +1,4 @@
-package edu.citadel.android.comicviewtester;
+package edu.citadel.android.dailycomic;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ public class ComicView extends ListView {
 
         addComicGetters();
     }
+
 
     // Takes an ArrayList<String> of comic titles and dates and adds
     // them to the ComicView

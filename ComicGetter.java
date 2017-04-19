@@ -1,4 +1,4 @@
-package edu.citadel.android.comicviewtester;
+package edu.citadel.android.dailycomic;
 
 import android.graphics.Bitmap;
 
@@ -57,6 +57,8 @@ public class ComicGetter implements Serializable {
     // used in ComicFinder class as well
     public static String makeUrlExtension(String comicTitle){
         return comicTitle
+                // change special characters to String
+                .replaceAll("@", "at")
                 // strip non-alphanumeric
                 .replaceAll("[^A-Za-z0-9]", "")
                 .toLowerCase();

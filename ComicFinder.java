@@ -1,4 +1,4 @@
-package edu.citadel.android.comicviewtester;
+package edu.citadel.android.dailycomic;
 
 import android.util.Log;
 
