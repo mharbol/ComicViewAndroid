@@ -8,6 +8,9 @@ import java.util.HashMap;
 
 public class ComicGetter implements Serializable {
 
+    // storing Bitmaps in static field allows ComicGetter objects
+    // to be much smaller and allows more to be added to a Bundle
+    // or Parcel
     private static HashMap<String, Bitmap> bitmapHashMap = new HashMap<>();
 
     private static final long serialVersionUID = 5474901498011L;
