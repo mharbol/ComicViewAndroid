@@ -29,8 +29,8 @@ public class ComicGetter implements Serializable {
         this.comicTitle = comicTitle;
         this.urlExtension = makeUrlExtension(comicTitle)
                 + "/" + year + "/"
-                + (month > 10 ? month : "0" + month)
-                + "/" + (day > 10 ? day : "0" + day);
+                + (month > 9 ? month : "0" + month)
+                + "/" + (day > 9 ? day : "0" + day);
     }
 
 
