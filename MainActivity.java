@@ -55,12 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateComicViewDate(){
         Date currentDate = new Date();
-        DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog dpd = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                cv.addComics(comics, view.getMonth() + 1, view.getDayOfMonth(), view.getYear());
+            public void onDateSet(DatePicker view, int year,
+                                  int month, int dayOfMonth) {
+                cv.addComics(comics, view.getMonth() + 1,
+                        view.getDayOfMonth(), view.getYear());
             }
-        },currentDate.getYear() + 1900, currentDate.getMonth(), currentDate.getDate());
+        },currentDate.getYear() + 1900, currentDate.getMonth(),
+                currentDate.getDate());
         dpd.show();
     }
 }
