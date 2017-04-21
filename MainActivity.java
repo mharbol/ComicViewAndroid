@@ -31,12 +31,27 @@ public class MainActivity extends AppCompatActivity {
         comics.add("Peanuts");
         comics.add("Non Sequitur");
         comics.add("Andy Capp");
+        comics.add("Adam @ Home");
+        comics.add("Dilbert Classics");
 
         cv.addComics(comics);
 
     }
 
+
     @Override
+    protected void onSaveInstanceState(Bundle outState){
+        outState.putSerializable("comics", comics);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle inState) {
+        super.onRestoreInstanceState(inState);
+        comics = (ArrayList<String>) inState.getSerializable("comics");
+    }
+
+        @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;

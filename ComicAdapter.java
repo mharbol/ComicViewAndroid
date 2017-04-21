@@ -70,6 +70,8 @@ public class ComicAdapter extends ArrayAdapter<ComicGetter> {
         @Override
         protected Bitmap doInBackground(String... urls){
             String url = ComicFinder.getComicSource(urls[0]);
+            if (url == null)
+                url = ComicFinder.getComicSource(urls[1]);
             Bitmap comic = null;
             try{
                 InputStream in = new java.net.URL(url).openStream();

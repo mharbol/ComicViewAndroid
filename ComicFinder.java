@@ -62,6 +62,9 @@ public class ComicFinder {
     // returns true if a comic name is valid, meaning
     // the comic is supported by gocomics.com
     public static boolean isValidComic(String comicTitle){
-        return getComicSource(ComicGetter.makeUrlExtension(comicTitle)) != null;
+        String[] url = ComicGetter.makeUrlExtension(comicTitle);
+        if (getComicSource(url[0]) != null)
+            return true;
+        return (getComicSource(url[1]) != null);
     }
 }
